@@ -4,7 +4,7 @@
 
 - [1. Resumen del proyecto](#1-Resumen-del-proyecto)
 - [2. Resultados](#2-Resultados)
-- [3. Instalación Local](#3-Instalacion)
+- [3. Instalación Local](#3-Instalación-Local)
 
 ---
 
@@ -16,23 +16,23 @@ El objetivo de dicha pagina es que el usuario pueda visualizar los datos de los 
 
 La tecnología ultilizada fue React.js
 
-### Resultados
+## 2. Resultados
 
-#### Destokp
+### Destokp
 
 ![Screenshot](./imagenesReadme/1.png)
 ![Screenshot](./imagenesReadme/2.png)
 ![Screenshot](./imagenesReadme/3.png)
 ![Screenshot](./imagenesReadme/4)
 
-#### Mobile
+### Mobile
 
 ![Screenshot](./imagenesReadme/5.png)
 ![Screenshot](./imagenesReadme/6.png)
 ![Screenshot](./imagenesReadme/7.png)
 ![Screenshot](./imagenesReadme/8.png)
 
-### Instalación Local
+## 3. Instalación Local
 
 Realizamos un clon del proyecto, por medio de la consola, luego dentro del proyecto ejecutamos los siguientes comando:
 
