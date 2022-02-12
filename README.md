@@ -18,21 +18,19 @@ La tecnología ultilizada fue React.js
 
 ### Resultados
 
-Enlace publicado
-
 #### Destokp
 
-![Screenshot](./imagenesReadme/1)
-![Screenshot](./imagenesReadme/2)
-![Screenshot](./imagenesReadme/3)
+![Screenshot](./imagenesReadme/1.png)
+![Screenshot](./imagenesReadme/2.png)
+![Screenshot](./imagenesReadme/3.png)
 ![Screenshot](./imagenesReadme/4)
 
 #### Mobile
 
-![Screenshot](./imagenesReadme/5)
-![Screenshot](./imagenesReadme/6)
-![Screenshot](./imagenesReadme/7)
-![Screenshot](./imagenesReadme/8)
+![Screenshot](./imagenesReadme/5.png)
+![Screenshot](./imagenesReadme/6.png)
+![Screenshot](./imagenesReadme/7.png)
+![Screenshot](./imagenesReadme/8.png)
 
 ### Instalación Local
 
