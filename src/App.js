@@ -6,8 +6,6 @@ import Home from './views/Home';
 import CharactersResult from './views/Characters';
 import Error from './views/Error';
 
-/* const PAGE_NUMBER = 1; */
-
 const App = () => {
   return (
     <BrowserRouter>

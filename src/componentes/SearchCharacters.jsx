@@ -10,6 +10,7 @@ const SearchCharacters = ({setCharacters, charactersFilter}) => {
   }
 
   const filter=(finishedSearch)=>{
+    // eslint-disable-next-line array-callback-return
     var resultSearch=charactersFilter.filter((elemento) => {
       if(elemento.name.toString().toLowerCase().includes(finishedSearch.toLowerCase())){
         return elemento;
