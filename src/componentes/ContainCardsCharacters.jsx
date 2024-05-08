@@ -1,7 +1,7 @@
 import React from 'react';
 import Characters from './CardCharacter';
 import styled from 'styled-components';
-import time from '../imagenes/time.jpg';
+import time from '../imagenes/time.png';
 import oops from '../imagenes/oops.png';
 
 const ContainCharacters = ({characters, loading, setCharacters}) => {
@@ -21,7 +21,7 @@ const ContainCharacters = ({characters, loading, setCharacters}) => {
     ? 
       <>
          <ContainSpinner>
-          <img src={time} alt="" />
+          <img src={time} alt=""/>
           <div className="spinnerCenter flexDocumentSpinner mt-10" id="spinnerPage">
              <p>Procesando...</p>
              <div className="spinner"></div>
@@ -31,20 +31,23 @@ const ContainCharacters = ({characters, loading, setCharacters}) => {
     : 
     null
     }   
-    {characters.length > 0 ? characters.map(character => {
-      return (     
+    {characters.length > 0 
+      ? (
+      characters.map(character => (
         <Characters 
-          key= {character.id} 
+          key={character.id} 
           character={character} 
           editInfoCharacters={editInfoCharacters}
-        />     
-      )
-    })      
-    : 
-    <ContainNotResults>
-          <img src={oops} alt="" />
-          <p>El personaje buscado no existe, pruebe con otro.</p>
-    </ContainNotResults>     
+        />
+      ))
+      ) : 
+      !loading ? (
+      <ContainNotResults>
+        <img src={oops} alt="" />
+        <p>El personaje buscado no existe, pruebe con otro.</p>
+      </ContainNotResults>
+      ) : 
+      null
     }
     </DivCharacters>
     </>
@@ -77,10 +80,7 @@ align-items:center;
 margin: 2rem 0;
 
   img{
-    width : 40%;
-    @media (max-width: 768px) {
-      width : 100%;
-    }
+    width : 100%;
   }
   p{
     color: #fff;

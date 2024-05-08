@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import time from '../imagenes/time.png';
 
 const Home = () => {
+  const [iframeLoading, setIframeLoading] = useState(true);
+
+  const handleIframeLoad = () => {
+    setIframeLoading(false);
+  };
+
   return ( 
     <ContainHome>
       <h1>Descubre los personajes del mundo de marvel</h1>
       <nav>
         <NavLink to="/characters">Personajes</NavLink>
       </nav>
+      {iframeLoading && (
+        <ContainSpinner>
+        <img src={time} alt="" />
+        <div className="spinnerCenter flexDocumentSpinner mt-10" id="spinnerPage">
+           <p>Procesando...</p>
+           <div className="spinner"></div>
+        </div>         
+       </ContainSpinner>
+      )}
       <ContainerVideo> 
         <iframe 
           className='responsive-iframe'
@@ -17,8 +33,10 @@ const Home = () => {
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
           allowFullScreen
+          onLoad={handleIframeLoad}
+          style={{ display: iframeLoading ? 'none' : 'block' }}
         ></iframe>
-      </ContainerVideo>   
+      </ContainerVideo>  
     </ContainHome>
    );
 }
@@ -71,6 +89,20 @@ padding-top: 56.25%; /* 16:9 Aspect Ratio */
       height: 100%;
     }
  }
+`;
+const ContainSpinner = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+
+  img{
+    margin-top: 2%;
+    width: 30%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 53% 75%, 27% 100%, 27% 75%, 0% 75%);
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
 `;
 
 export default Home;
